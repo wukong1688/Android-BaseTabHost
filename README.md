@@ -3,3 +3,7 @@
 
 TabHost 图片演示如下：
 ![demo](art/TabHost_show.gif)
+
+
+TabHost + RecycleList 图片演示如下：
+![demo](art/Tabhost_XRecylist.gif)
