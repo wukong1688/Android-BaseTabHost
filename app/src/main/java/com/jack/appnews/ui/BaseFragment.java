@@ -35,21 +35,16 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        LogUtil.e("Fragment onCreateView");
         if (rootView == null) { //在这里进行第一次加载Fragment的逻辑处理
             rootView = inflater.inflate(inflateLayoutId(), container, false);
             unbinder = ButterKnife.bind(this, rootView);
             initViews();
-
-            LogUtil.e("Fragment onCreateView 11");
         }
 
         //缓存的rootView需要判断是否已经被加过parent， 如果有parent需要从parent删除，要不然会发生这个rootview已经有parent的错误。
         ViewGroup parent = (ViewGroup) rootView.getParent();
         if (parent != null) {
             parent.removeView(rootView);
-
-            LogUtil.e("Fragment onCreateView 22");
         }
 
         return rootView;

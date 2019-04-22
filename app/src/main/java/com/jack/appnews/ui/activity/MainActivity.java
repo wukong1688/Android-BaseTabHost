@@ -45,7 +45,7 @@ public class MainActivity extends BaseActivity implements TabHost.OnTabChangeLis
         //2)调用 setup 方法
         mTabHost.setup(this, getSupportFragmentManager(), R.id.real_content);
 
-        //3)添加
+        //3)添加 Tab
         for (MainTabItem tab : mTabs) {
             TabHost.TabSpec tabSpec = mTabHost.newTabSpec(String.valueOf(tab.getText())).setIndicator(getTabItemView(tab));
             mTabHost.addTab(tabSpec, tab.getFragment(), null);
