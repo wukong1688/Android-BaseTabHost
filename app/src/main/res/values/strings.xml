@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppNews</string>
+
+    <string name="main_tab_news">首页</string>
+    <string name="main_tab_video">视频</string>
+    <string name="main_tab_image">图片</string>
+    <string name="main_tab_mine">我的</string>
+
+
+</resources>
